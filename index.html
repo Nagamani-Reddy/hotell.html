@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Page</title>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    .main {
+      font-family: 'open sans', sans-serif;
+    }
+
+    .header {
+      background: white;
+      padding: 25px 260px;
+      border-bottom: 3px solid #ddd;
+    }
+  
+    .yt_button {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/social_icons/yt.png");
+      float: right;
+      height: 32px;
+      width: 32px;
+      margin-left: 5px;
+    }
+
+    .twitter_button {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/social_icons/twitter.png");
+      float: right;
+      height: 32px;
+      width: 32px;
+      margin-left: 5px;
+    }
+
+    .fb_button {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/social_icons/facebook.png");
+      float: right;
+      height: 32px;
+      width: 32px;
+      margin-left: 5px;
+    }
+
+    .yt_button:hover {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/social_icons/youtube-hover.png");
+      float: right;
+    }
+
+    .twitter_button:hover {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/social_icons/twitter-hover.png");
+      float: right;
+    }
+
+    .fb_button:hover {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/social_icons/facebook-hover.png");
+      float: right;
+    }
+
+    .head_text {
+      font-size: 14px;
+      float: right;
+      margin-right: 15px;
+      padding-top: 9px;
+      color: #a9a9a9;
+    }
+
+    .page {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/bg.png") #1f334a fixed no-repeat center top;
+      background-size: cover;
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    .justmagical {
+      font-size: 48px;
+      font-weight: normal;
+      color: #a9a9a9;
+      padding-top: 110px;
+      margin-top: 0px;
+    }
+
+    .seasonsresort {
+      font-size: 48px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .redline {
+      background-color: red;
+      width: 60px;
+      height: 5px;
+      margin: 25px auto;
+    }
+
+    .page .p1 {
+      color: #d3d3d3;
+      font-size: 18px;
+      max-width: 65%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gethouse_btn a {
+      background: #cc333f;
+      border: none;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 18px;
+      color: #fff;
+      position: relative;
+      display: inline-block;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      padding: 15px 30px;
+      text-decoration: none;
+    }
+
+    .gethouse_btn a:hover {
+      background: #c22731;
+      border: none;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .page .p2 {
+      color: #f0fff0;
+      font-size: 13px;
+      padding-bottom: 60px;
+      margin-bottom: 0px;
+    }
+
+    .page1 {
+      background: #faf5f5;
+      background-size: cover;
+      border-bottom: 3px solid #eadbdc;
+      text-align: center;
+    }
+
+    .page1 img {
+      display: inline-block;
+      position: relative;
+      top: -15px;
+    }
+
+    .page1 .block {
+      padding-top: 30px;
+      display: flex;
+      flex-direction: row;
+      padding-left: 260px;
+      padding-right: 260px;
+    }
+
+    .page_text {
+      position: relative;
+      display: inline-block;
+      padding-left: 15px;
+      top: -10px;
+      padding-bottom: 15px;
+    }
+
+    .page1 h3 {
+      color: #696969;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .page1 h5 {
+      color: #a9a9a9;
+      font-size: 14px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page2 {
+      background: #fff;
+      background-size: cover;
+      text-align: center;
+    }
+
+    .page2 .page_title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #000000;
+      padding-top: 50px;
+    }
+
+    .page2 .sub_title {
+      text-align: center;
+      color: rgb(169, 169, 169);
+      font-size: 16px;
+      line-height: 26px;
+      max-width: 60%;
+      margin-left: 20%;
+      padding-bottom: 15px;
+    }
+
+    .bg_homes {
+      background: #faf5f5;
+      border-bottom: 3px solid #eadbdc;
+      position: relative;
+      width: 220px;
+      border-radius: 3px;
+    }
+
+    .img_homes {
+      display: inline-block;
+      text-align: center;
+      width: 220px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .img_homes img {
+      margin-left: -100%;
+      margin-right: -100%;
+    }
+
+    .txt_homes {
+      position: relative;
+      padding: 15px 0px;
+    }
+
+    .page2 .p1 {
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .page2 .p2 {
+      color: #a9a9a9;
+      font-size: 14px;
+    }
+
+    .perday_btn a {
+      background: #cc333f;
+      border: none;
+      border-radius: 2px;
+      font-weight: normal;
+      font-size: 12px;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 5px 20px;
+    }
+
+    .perday_btn a:hover {
+      background: #c22731;
+    }
+
+    .page2 .direction {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box_Homes {
+      background: #faf5f5;
+      border-bottom: 3px solid #eadbdc;
+      text-align: left;
+      width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      border-radius: 3px;
+    }
+
+    .box_text {
+      position: relative;
+      display: inline-block;
+      text-align: left;
+      margin-left: 20px;
+      line-height: 100%;
+    }
+
+    .b1_homes_st {
+      color: #000;
+      font-weight: normal;
+      font-size: 18px;
+    }
+
+    .b2_homes_st {
+      color: rgb(169, 169, 169);
+      font-weight: normal;
+      font-size: 14px;
+      position: relative;
+      top: -5px;
+    }
+
+    .Reservation_btn a {
+      background: #cc333f;
+      border: none;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 12px 30px;
+    }
+
+    .Reservation_btn a:hover {
+      background: #c22731;
+    }
+
+    .page2 .box_Homes {
+      display: flex;
+      flex-direction: row;
+      gap: 60px;
+    }
+
+    .page3 {
+      background: url("https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/bg.png") fixed no-repeat center top;
+      background-size: cover;
+      text-align: center;
+      padding: 40px 0px;
+    }
+
+    .page3 .block img {
+      padding-bottom: 20px;
+    }
+
+    .L1_style {
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .L2_style {
+      color: #a9a9a9;
+      font-size: 16px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .page3 .logo {
+      display: flex;
+      flex-direction: row;
+      opacity: 1;
+      justify-content: center;
+      gap: 100px;
+    }
+
+    .page4 {
+      background: #fff;
+      padding: 50px 0px;
+    }
+
+    .N1_style {
+      color: #000000;
+      font-size: 28px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .N2_style {
+      color: rgb(169, 169, 169);
+      text-align: left;
+      font-size: 16px;
+      line-height: 26px;
+      width: 450px;
+    }
+
+    .twitter-share-button {
+      text-decoration: none;
+      background-color: black;
+      border-radius: 50px;
+      color: white;
+    }
+
+    .video_style iframe {
+      padding-top: 25px;
+      padding-bottom: 55px;
+      width: 500px;
+      height: 260px;
+      border: none;
+    }
+
+    .page4 .block {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page4 .soc_icons {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .page5 {
+      background: #cc333f;
+      text-align: center;
+      padding: 40px 0px;
+      border-bottom: 3px solid #b5232f;
+    }
+
+    .page5 .l1 {
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .page5 .l2 {
+      color: #d3d3d3;
+      font-size: 16px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .page5 .box_style {
+      background: #faf5f5;
+      border-radius: 5px;
+      border-bottom: 3px solid #c9baba;
+      width: 460px;
+      margin-top: 40px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .page5 .b_style img {
+      background: #eadbdc;
+      float: left;
+      height: 60px;
+      width: 60px;
+      position: relative;
+      display: inline-block;
+      margin-left: 3%;
+      margin-top: 20px;
+    }
+
+    .page5 .logo_style {
+      border-radius: 100%;
+    }
+
+    .page5 .txt_style {
+      background: #fff;
+      float: right;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      width: 80%;
+      color: #808080;
+      padding-top: 20px;
+      padding-left: 1%;
+      text-align: left;
+      font-size: 14px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .page5 .txt {
+      width: 99%;
+    }
+
+    .page5 .testi_bottom {
+      position: relative;
+      top: -5px;
+    }
+
+    .page5 .env_st {
+      color: #59a3fc;
+      position: relative;
+      top: -5px;
+    }
+
+    .page5 .parts {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .page6 .Room_Res {
+      background: #fff;
+      text-align: center;
+      padding: 50px 0px;
+    }
+
+    .page6 .Get_Room {
+      color: #000;
+      font-size: 28px;
+      text-align: center;
+      padding-top: 50px;
+      font-weight: 400;
+    }
+
+    .page6 .txt_Res {
+      color: #808080;
+      font-size: 14px;
+      max-width: 370px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page6 .Res_btn a {
+      background: #cc333f;
+      border: none;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 70px;
+      padding: 20px 45px;
+    }
+
+    .page6 .Res_btn a:hover {
+      background: #c22731;
+    }
+
+    .page6 .block {
+      text-align: center;
+    }
+
+    .footer {
+      background: #f2f2f2;
+      text-align: center;
+      height: 70px;
+    }
+
+    .rights_st {
+      color: #a9a9a9;
+      font-size: 14px;
+      text-align: left;
+      padding-top: 25px;
+      position: relative;
+      display: inline-block;
+
+    }
+
+    .pixfort_st {
+      color: #cc333f;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: left;
+      position: relative;
+      display: inline-block;
+    }
+
+    .likes_st {
+      color: #a9a9a9;
+      font-size: 14px;
+      position: relative;
+      display: inline-block;
+      padding-right: 15px;
+      padding-top: 25px;
+      float: right;
+    }
+
+    .socbuttons {
+      height: 100%;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      padding-bottom: 10px;
+      width: 100%;
+    }
+
+    .footer .soc_icons {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      width: 200px;
+      height: 25px;
+      position: relative;
+      display: inline-block;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      padding-left: 90px;
+      margin-top: 15px;
+      float: right;
+    }
+
+    .footer .soc_icons {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .footer .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="container">
+        <div class="block">
+          <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/logo.png"
+            alt="hotellogo" />
+          <a href="#" class="yt_button"></a>
+          <a href="#" class="twitter_button"></a>
+          <a href="#" class="fb_button"></a>
+          <div class="head_text">Stay Connected</div>
+        </div>
+        </div>
+      </div>
+    <div class="page">
+      <div class="container">
+        <div class="block">
+          <div class="text">
+            <h1 class="justmagical">JUST MAGICAL</h1>
+            <h1 class="seasonsresort">FOUR SEASONS RESORT</h1>
+            <div class="redline"></div>
+            <p class="p1">More than 10 unique HTML templates in one bundle isn't that awesome with a lot of features and
+              great design brought to you by PixFort.</p>
+            <span class="gethouse_btn"><a href="#">Get House Now</a></span>
+            <p class="p2">*Note: Bundle ends in two weeks from now.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page1">
+      <div class="container">
+        <div class="block">
+          <div class="part1">
+            <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/1.png"
+              alt="high quality tutorials">
+            <div class="page_text">
+              <h3>High quality tutorials</h3>
+              <h5>Lorem ipsum dolor sit amet consectetur adipiscing elite.</h5>
+            </div>
+          </div>
+          <div class="part2">
+            <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/2.png"
+              alt="good prices for all">
+            <div class="page_text">
+              <h3>Good prices for all</h3>
+              <h5>Lorem ipsum dolor sit amet consectetur adipiscing elite.</h5>
+            </div>
+          </div>
+          <div class="part3">
+            <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/3.png"
+              alt="pay easy and online">
+            <div class="page_text">
+              <h3>Pay easy and online</h3>
+              <h5>Lorem ipsum dolor sit amet consectetur adipiscing elite.</h5>
+            </div>
+          </div>
+          <div class="part4">
+            <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/4.png"
+              alt="be the best">
+            <div class="page_text">
+              <h3>Be The Best</h3>
+              <h5>Lorem ipsum dolor sit amet consectetur adipiscing elite.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page2">
+      <div class="container">
+        <div class="block">
+          <h1 class="page_title">Featured Homes</h1>
+          <p class="sub_title">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt
+            ut labore.</p>
+          <div class="direction">
+            <div class="part1">
+              <div class="bg_homes">
+                <div class="img_homes"><img
+                    src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/image-1.png"
+                    alt="fea_pic1"></div>
+                <div class="txt_homes">
+                  <p class="p1" style="font-size: 17px;">Welcome to Hotel</p>
+                  <p class="p2">Lorem ipsum dolor sit amet consectetur adipiscing elite.</p>
+                </div>
+                <span class="perday_btn"><a href="#">$45 per day</a></span>
+              </div>
+            </div>
+            <div class="part2">
+              <div class="bg_homes">
+                <div class="img_homes"><img
+                    src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/image-2.png"
+                    alt="fea_pic2"></div>
+                <div class="txt_homes">
+                  <p class="p1">Best Services</p>
+                  <p class="p2">Lorem ipsum dolor sit amet consectetur adipiscing elite.</p>
+                </div>
+                <span class="perday_btn"><a href="#">$30 per day</a></span>
+              </div>
+            </div>
+            <div class="part3">
+              <div class="bg_homes">
+                <div class="img_homes"><img
+                    src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/image-3.png"
+                    alt="fea_pic3"></div>
+                <div class="txt_homes">
+                  <p class="p1">Daily Trips</p>
+                  <p class="p2">Lorem ipsum dolor sit amet consectetur adipiscing elite.</p>
+                </div>
+                <span class="perday_btn"><a href="#">$75 per day</a></span>
+              </div>
+            </div>
+            <div class="part4">
+              <div class="bg_homes">
+                <div class="img_homes"><img
+                    src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/image-4.png"
+                    alt="fea_pic4"></div>
+                <div class="txt_homes">
+                  <p class="p1">Great Support</p>
+                  <p class="p2">Lorem ipsum dolor sit amet consectetur adipiscing elite.</p>
+                </div>
+                <span class="perday_btn"><a href="#">$125 per day</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page2">
+      <div class="container">
+        <div class="block">
+          <div class="box_Homes">
+            <div class="box_text">
+              <h3 class="b1_homes_st"> Are you ready for holiday?</h3>
+              <p class="b2_homes_st"> Lorem ipsum consectetur adipiscing.</p>
+            </div>
+            <div class="Res_st">
+              <span class="Reservation_btn"><a href="#">Make a Reservation</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page3">
+      <div class="container">
+        <div class="block">
+          <h3 class="L1_style">Great people trusted our services</h3>
+          <p class="L2_style">great words from great people</p>
+          <div class="logo">
+            <div> <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/logo_1.png"
+                alt="wordpress"> </div>
+            <div> <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/logo_2.png"
+                alt="traveltrooper"> </div>
+            <div> <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/logo_3.png"
+                alt="envato"> </div>
+            <div> <img src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/logo_4.png"
+                alt="joomla"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page4">
+      <div class="container">
+        <div class="block">
+          <div class="part1">
+            <h1 class="N1_style">New Latest Offers</h1>
+            <p class="N2_style">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex commodo consequat Duis aute irure dolor in reprehenderit.</p>
+            <div class="soc_icons">
+              <a href="https://twitter.com/share" class="twitter-share-button"
+                style="width: 45px; height: 18px; padding-left: 8px; padding-top: 3px; font-size: 14px;">Tweet</a>
+              <iframe
+                src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fthemeforest.net%2Fuser%2FPixFort&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35&amp;appId=445119778844521"
+                class="c1" style="border: none;">
+              </iframe>
+            </div>
+          </div>
+          <div class="part2">
+            <div class="video_style">
+              <iframe
+                src="https://player.vimeo.com/video/102732914?title=0&amp;byline=0&amp;portrait=0&amp;color=11b1c2&amp;wmode=opaque"
+                allowfullscreen="">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page5">
+      <div class="container">
+        <div class="block">
+          <span class="l1">What our awesome clients say</span><br>
+          <span class="l2">great words from great people</span><br>
+          <div class="parts">
+            <div class="part1">
+              <div class="box_style">
+                <div class="b_style">
+                  <img
+                    src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/testimonials/envato-logo.png"
+                    class="logo_style" alt="">
+                </div>
+                <div class="txt_style">
+                  <p class="txt">Im a web designer, you guys are very inspiring I wish to see more work from maybe more
+                    freebies.</p>
+                  <span class="testi_bottom"><img
+                      src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/stars.original.png"
+                      alt="">
+                    <span class="env_st">via Envato.com</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="part2">
+              <div class="box_style">
+                <div class="b_style">
+                  <img
+                    src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/testimonials/unboune-logo.png"
+                    class="logo_style" alt="">
+                </div>
+
+                <div class="txt_style">
+                  <p class="txt">Great service with fast and relible support The design work and detail put into themes
+                    are great.</p>
+                  <span class="testi_bottom"><img
+                      src="https://pixfort.website/themeforest/landing/flatpack/5_hotel/images/5_hotel/stars.original.png"
+                      alt="">
+                    <span class="env_st">via Unbounce.com</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page6">
+      <div class="container">
+        <div class="block">
+          <h1 class="Get_Room">Get You Room Now</h1>
+          <p class="txt_Res">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.
+          </p>
+          <span class="Res_btn"> <a href="#">Make a Reservation</a> </span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container ">
+        <div class="footer1">
+          <span class="rights_st"> All rights reserved Copyright &copy; 2014 FLATPACK by
+            <span class="pixfort_st">PixFort</span>
+          </span>
+        </div>
+        <div class="footer2">
+          <div class="socbuttons">
+            <div class="soc_icons">
+              <a href="https://twitter.com/share" class="twitter-share-button"
+                style="width: 50px; height: 18px; padding-left: 3px; padding-top: 4px; font-size: 12px;">Tweet</a>
+              <iframe
+                src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fthemeforest.net%2Fuser%2FPixFort&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35&amp;appId=445119778844521"
+                class="c1" style="border: none;">
+              </iframe>
+            </div>
+            <div class="likes_st">Your likes &amp; share makes us happy!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
